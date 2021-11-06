@@ -44,42 +44,21 @@ class Morse():
 
 
 
-def Text_to_Morsecode(sentence):
-    m = Morse()
-    cipher=''
-    if sentence[0] in 'QWERTYUIOPASDFGHJKLZXCVBNM ':
-        for letter in sentence:
-            cipher += m.text[letter]+' '
-        return cipher
-    else:
-        l = []
-        i,count,t = 0,0,0
-        while i < len(sentence):
-            for j in range(i+1,len(sentence)):
-                if sentence[j:j+1] == ' ':
-                    if sentence[j:j+3] == '   ':
-                        l.append(sentence[i:j])
-                        t +=1
-                        if l[t-1] == '':
-                            t -= 1
-                            l.pop(t)
-                            if l[t - 1] != '   ':
-                                t+=1
-                                l.insert(t,'   ')
-                        i=j+3
-                    else:
-                        l.append(sentence[i:j])
-                        if l[t - 1] == '':
-                            t -= 1
-                            l.pop(t)
-                            t+=1
-                        i = j+1
-                elif j == len(sentence)-1:
-                    l.append(sentence[i:j])
-                    i=j
-            i+=1
-        return l
 
+
+def textToMorse(sentence):
+    m = Morse()
+    cipher = ''
+    for letter in sentence:
+        cipher += m.text[letter] + ' '
+    return cipher
+#chinguun = .-. ._.
+
+def morseToText(morse):
+    m = Morse()
+    l = morse.split(' ')
+    return l
+#.-. -_. = chinguun
 
 
 
@@ -88,9 +67,9 @@ def Text_to_Morsecode(sentence):
 
 def test():
 #put test cases in here
-    text = Text_to_Morsecode("HI MY NAME IS CHUNGUS")
-    print(text)
-    print(Text_to_Morsecode(text))
+    moresad = textToMorse("CHINGUUN IS VERY SAD")
+    print(moresad)
+    print(morseToText(moresad))
 
 
     pass # for empty methods to pass the function
