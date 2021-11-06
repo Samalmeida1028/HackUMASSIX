@@ -21,9 +21,9 @@ def initialize():
 
 intervals = ([], [])
 
-ditVal = 0.75
-dahVal = 2.25
-epsilon = 0.2
+ditVal = 1
+dahVal = 3
+epsilon = 0.4
 
 def loop():
 
@@ -55,8 +55,8 @@ def loop():
                     intervalStart[i] = time.perf_counter()
                 highLow[i] = 0
 
-        intervalsToMorse()
-def withinDitRange(toCheck, correctVal):
+        print(intervalsToMorse())
+def withinRange(toCheck, correctVal):
     return abs(toCheck - correctVal) < epsilon
 
 def intervalsToMorse():
@@ -64,18 +64,24 @@ def intervalsToMorse():
     i = 0
     for interval in intervals[0]:
         if i == 0:
+            i += 1
             continue
         elif i % 2 == 0:
-            pass
+            if interval > (15 * ditVal):
+                sys.exit()
+            elif interval > (6 * ditVal):
+                result += "   "
+            elif interval > (3 * ditVal):
+                result += " "
         else:
-            if withinRange(interval, dahVal):
-                result += "-"
-            elif withinDitRange(interval, ditVal):
+            if interval < ditVal + epsilon:
                 result += "."
+            elif (ditVal + epsilon < interval) and (interval < dahVal + epsilon):
+                result += "-"
             else:
                 sys.exit()
         i += 1
-
+    return result
 
 if __name__ == '__main__':
     loop()
