@@ -3,43 +3,61 @@ import time
 
 arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000)      # initialize Arduino
 
-def loop():
-    threshold = initialize()
-    intervals = []
-    prevPD = 0
-    prevPS = 0
-    while True:
-        voltage = arduino.readline()                # read from the serial line
-        strings = voltage.decode("utf-8").split(" ")
-        vPD = float(strings[0])
-        vPS = float(strings[1])
-
-        if vPS >= 10.00:  # check if analog read voltage >= threshold voltage
-            PS = 1
-        else:
-            PS = 0
-
-        if vPD >= threshold:
-            PD = 1
-        else:
-            PD = 0
-        
-        if prevPD == 0:
-            if PD == 1:
-                intervalStart = time.process_time()
-        elif prevPD == 1:
-            if PD == 0:
-                intervals.append(time.process_time() - intervalStart)
-
-
 def initialize():
     refVal = 10
+    averageNoise = 0
     for i in range(0,refVal):
         voltage = arduino.readline()  # read from the serial line
         strings = voltage.decode("utf-8").split(" ")
         averageNoise += float(strings[1])
     averageNoise /= refVal
     return averageNoise
+
+intervals = [[], []]
+ditVal = 0.5
+dahVal = 1.5
+epsilon = 0.1
+
+def loop():
+    # 0 is for PS(PressureSensor), 1 is for PR (PhotoResistor)
+    threshold = initialize()
+    intervals = [[], []]
+    # keeps track of time between clicks
+    intervalStart = (0, 0)
+    # keeps track of if PS or PR was clickled previously
+    prevHighLow = (0, 0)
+    # keeps track of if PS or PR is clicked currently
+    highLow = (0, 0)
+    while True:
+        arduinoInput = arduino.readline()                # read from the serial line
+        voltageStrings = arduinoInput.decode("utf-8").split(" ")
+        voltages = (float(voltageStrings[0]), float(voltageStrings[1]))
+
+        # check if analog read voltage of PS >= threshold voltage
+        if voltages[0] > 10.00:
+            highLow[0] = 1
+        else:
+            highLow[0] = 0
+
+        # check if analog read voltage of PR >= threshold voltage
+        if voltages[1] >= threshold:
+            highLow[1] = 1
+        else:
+            highLow[1] = 0
+        
+        # check if click changed for PS and PR
+        for i in range(0, 2):
+            if prevHighLow[i] == 0:
+                if highLow[i] == 1:
+                    intervalStart[0] = time.process_time()
+            elif prevHighLow[i] == 1:
+                if highLow[i] == 0:
+                    intervals[i].append(time.process_time() - intervalStart[i])
+        optimize()
+
+def optimize():
+    # temp
+    print(intervals)
 
 
 if __name__ == '__main__':
