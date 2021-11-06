@@ -18,23 +18,23 @@ def textToOutput(input):
     #long represents dah
     long = short*3
     #represents the possible options
-    instruction = (short, long)
+    instruction = (long, short)
     #represents the final output instructions for light
     instruct = []
-    #Re
-    space = 1
+    #Reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     if checkInput(input):
         morse = m.textToMorse(input)
     else:
         morse = input
     print(morse)
     for char in morse:
-        if char !=' ':
-            num = ord(char)//(ord('.'))
-            instruct.append((instruction[num-1],1))
-            instruct.append((space,0))
+        space = 1
+        if char != ' ':
+            num = ord(char)//((ord('-'))+1)
+            instruct.append((instruction[num],1))
         else:
-            instruct.append((long,0))
+            space = long
+        instruct.append((space,0))
     return instruct
 
 
