@@ -13,13 +13,15 @@ def checkInput(input):
 def textToOutput(input):
     input = input.upper()
     short = 1
-    instruction = (short, short*2)
+    long = short*3
+    instruction = (short, long)
     instruct = []
     space = .5
     if checkInput(input):
         morse = m.textToMorse(input)
     else:
         morse = input
+    print(morse)
     for char in morse:
         if char !=' ':
             num = ord(char)//ord('.')
