@@ -10,8 +10,6 @@ def loop():
         vPD = strings[0]
         vPS = strings[1]
 
-        pd = 0
-        ps = 0
         if vPS >= "10.00":  # check if analog read voltage >= threshold voltage
             pd = "PD: 1"
         else:
