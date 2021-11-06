@@ -14,7 +14,7 @@ def textToOutput(input):
     #takes in string of characters or morse code
     input = input.upper()
     #short represents dit
-    short = 1
+    short = 2
     #long represents dah
     long = short*3
     #represents the possible options
@@ -22,7 +22,7 @@ def textToOutput(input):
     #represents the final output instructions for light
     instruct = []
     #Re
-    space = .5
+    space = 1
     if checkInput(input):
         morse = m.textToMorse(input)
     else:

@@ -34,6 +34,7 @@ def loop():
 
 def initialize():
     refVal = 10
+    averageNoise = 0
     for i in range(0,refVal):
         voltage = arduino.readline()  # read from the serial line
         strings = voltage.decode("utf-8").split(" ")
