@@ -27,6 +27,7 @@ def textToOutput(input):
         morse = m.textToMorse(input)
     else:
         morse = input
+    print(morse)
     for char in morse:
         if char !=' ':
             num = ord(char)//(ord('.'))
@@ -38,7 +39,7 @@ def textToOutput(input):
 
 
 def test():
-    textToOutput('The quick brown fox jumps over the lazy dog.')
+    print(textToOutput('The quick brown fox jumps over the lazy dog.'))
 
 
 if __name__ == '__main__':

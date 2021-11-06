@@ -107,6 +107,9 @@ def test():
         print(c)
         x = morseToText(textToMorse(c))
         assert(c==x)
+    inp = 'help me'.upper()
+    x = textToMorse(inp)
+    print(x)
 
 
     pass # for empty methods to pass the function

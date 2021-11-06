@@ -4,9 +4,10 @@ import time
 from struct import *
 arduino = serial.Serial(port='COM9', baudrate=115200, timeout=.1)
 def write_read(x):
-    print(arduino.write(x[0]),
-    arduino.write(x[1]))
-    data = arduino.readline()
+    print(x[1])
+    arduino.write(x[1])
+    data = ''
+    data += arduino.readline().decode('utf-8')
     return data
 
 string = input("Enter a string: ") # Taking input from user
