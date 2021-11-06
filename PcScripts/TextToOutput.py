@@ -1,5 +1,5 @@
 import MorseCodeConverter as m
-
+import serial
 
 def checkInput(input):
     str = 'qwertyuiopasdfghjklzxcvbnm1234567890(),/?;:"'.upper()
@@ -35,6 +35,23 @@ def textToOutput(input):
         else:
             space = long
         instruct.append((space,0))
+    i = 0
+    while i < len(instruct):
+        if instruct[i][1] == 0 and instruct[i][0] == long:
+            k = 0
+            j = 0
+            while k < 4:
+                if (i + k < len(instruct)):
+                    if instruct[i + k][1] == 0 and instruct[i + k][0] == long:
+                        k += 1
+                    else:
+                        break
+                else:
+                    break
+            if (k == 4):
+                instruct.pop(i)
+                i -= 1
+        i += 1
     return instruct
 
 
