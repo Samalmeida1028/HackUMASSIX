@@ -1,14 +1,32 @@
 # path is CSV/file
 import csv
-
+import random
 # file = open('CSV/input.csv', 'w+', newline='') -> create new file
 # 'r' for reading 'w' for writing
 # arr = file.readlines() creates an array of lines
 # arr.split('|') -> splits by specified delimiter. make sure when you write data you separate values by delimiter
 
+class testMorse():
+    def __init__(self):
+        self.charactersAvaliable={
+            1: 'A', 2: 'B',
+             3: 'C', 4: 'D', 5: 'E',
+             6: 'F', 7: 'G', 8: 'H',
+             9: 'I', 10: 'J', 11: 'K',
+             12: 'L', 13: 'M', 14: 'N',
+             15: 'O', 16: 'P', 17: 'Q',
+             18: 'R', 19: 'S', 20: 'T',
+             21: 'U', 22: 'V', 23: 'W',
+            24: 'X', 25: 'Y', 26: 'Z',
+             27: '1', 28: '2', 29: '3',
+             30: '4', 31: '5', 32: '6',
+             33: '7', 34: '8', 35: '9',
+             36: '0', 37: ', ', 38: '. ',
+             39: '?', 40: '/', 41: '-',
+             42: '(', 43: ')', 44: ' '
+        }
 
 class Morse():
-
     def __init__(self):
         self.text = {'A': '.-', 'B': '-...',
                            'C': '-.-.', 'D': '-..', 'E': '.',
@@ -38,7 +56,7 @@ class Morse():
                                 '.----':'1', '..---': '2', '...--':'3',
                                 '....-':'4', '.....':'5', '-....':'6',
                                  '--...':'7', '---..':'8', '----.':'9',
-                                 '-----':'0',  '--..--':', ', '.-.-.-':'.',
+                                 '-----':'0',  '--..--':',', '.-.-.-':'.',
                                  '..--..':'?', '-..-.':'/',  '-....-':'-',
                                  '-.--.':'(',  '-.--.-':')', '   ': ' ', '':''}
 
@@ -48,6 +66,7 @@ class Morse():
 
 def textToMorse(sentence):
     m = Morse()
+    print(sentence)
     cipher = ''
     for letter in sentence:
         cipher += m.text[letter] + ' '
@@ -80,9 +99,20 @@ def morseToText(morse):
 
 def test():
 #put test cases in here
+
     moresad = textToMorse("qwertyuiopsdfghjklzc vbnm1234567890".upper())
     print(moresad)
     print(morseToText(moresad))
+
+    p=testMorse()
+    for i in range(0,100):
+        c = ''
+        for t in range(0,100):
+           c += p.charactersAvaliable[random.randint(1, 44)]
+        print(c)
+        x = morseToText(textToMorse(c))
+        assert(c==x)
+
 
 
     pass # for empty methods to pass the function
