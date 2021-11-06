@@ -22,7 +22,7 @@ class Morse():
                            '1': '.----', '2': '..---', '3': '...--',
                            '4': '....-', '5': '.....', '6': '-....',
                            '7': '--...', '8': '---..', '9': '----.',
-                           '0': '-----', ',': '--..--', '.': '.-.-.-',
+                           '0': '-----', ', ': '--..--', '.': '.-.-.-',
                            '?': '..--..', '/': '-..-.', '-': '-....-',
                            '(': '-.--.', ')': '-.--.-', ' ':'   '}
 
@@ -80,8 +80,8 @@ def morseToText(morse):
 
 def test():
 #put test cases in here
-    moresad = textToMorse("qwertyuiopsdfghjklzcvbnm1234567890, f".upper())
-   # print(moresad)
+    moresad = textToMorse("qwertyuiopsdfghjklzc vbnm1234567890".upper())
+    print(moresad)
     print(morseToText(moresad))
 
 
