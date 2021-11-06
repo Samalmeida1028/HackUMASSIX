@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PcScripts/demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PcScripts/TextToOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/TextToOutput.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,16 +295,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PcScripts/TextToOutput.py</url>
-          <line>37</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
