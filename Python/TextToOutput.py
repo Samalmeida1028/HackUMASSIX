@@ -25,10 +25,10 @@ def textToOutput(input):
     for char in morse:
         if char !=' ':
             num = ord(char)//(ord('.'))
-            instruct.append(instruction[num-1])
-            instruct.append(space)
+            instruct.append((instruction[num-1],True))
+            instruct.append((.5,False))
         else:
-            instruct.append(space*)
+            instruct.append((long,False))
     print(instruct)
 
 
