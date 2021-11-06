@@ -2,13 +2,13 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   Serial.setTimeout(1);
-  pinMode(A0, INPUT);
-  pinMode(A4, INPUT);
+  Serial.println("Arduino is ready!");
+  pinMode(A0, OUTPUT);
+  pinMode(A1, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.flush();
   double photodiode = analogRead(A0);
   double pressureSens = analogRead(A4);
   double values[2] = {pressureSens, photodiode};
