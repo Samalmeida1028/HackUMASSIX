@@ -4,6 +4,9 @@ import time
 arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000)      # initialize Arduino
 
 def loop():
+    intervals = []
+    prevPD = 0
+    prevPS = 0
     while True:
         voltage = arduino.readline()                # read from the serial line
         strings = voltage.decode("utf-8").split("|")
@@ -11,15 +14,22 @@ def loop():
         vPS = float(strings[1])
 
         if vPS >= 10.00:  # check if analog read voltage >= threshold voltage
-            pd = 1
+            PS = 1
         else:
-            pd = 0
+            PS = 0
 
         if vPD >= 50.00:
-            ps = 1
+            PD = 1
         else:
-            ps = 0
-        print(pd, ps)
+            PD = 0
+        
+        if prevPD == 0:
+            if PD == 1:
+                intervalStart = time.process_time()
+        elif prevPD == 1:
+            if PD == 0:
+                intervals.append(time.process_time() - intervalStart)
+
 
 if __name__ == '__main__':
     loop()
