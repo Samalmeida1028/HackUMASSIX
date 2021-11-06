@@ -80,8 +80,8 @@ def morseToText(morse):
 
 def test():
 #put test cases in here
-    moresad = textToMorse("qwertyuiopsdfghjklzcvbnm1234567890".upper())
-   # print(moresad)
+    moresad = textToMorse("qwertyuiopsdfghjklzc vbnm1234567890".upper())
+    print(moresad)
     print(morseToText(moresad))
 
 
