@@ -34,11 +34,29 @@ def textToOutput(input):
             instruct.append((space,0))
         else:
             instruct.append((long,0))
+    i = 0
+    while i<len(instruct):
+        if instruct[i][1]==0 and instruct[i][0]==long:
+            k = 0
+            j=0
+            while k<4:
+                if(i+k<len(instruct)):
+                    if instruct[i+k][1] == 0 and instruct[i+k][0] == long:
+                        ++k
+                    else:
+                        break
+                else:
+                    break
+
+            if(k==4):
+                instruct.remove(i)
+                --i
+        ++i
     return instruct
 
 
 def test():
-    textToOutput('The quick brown fox jumps over the lazy dog.')
+    print(textToOutput('The quick brown fox jumps over the lazy dog.'))
 
 
 if __name__ == '__main__':
