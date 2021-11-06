@@ -16,7 +16,7 @@ def initialize():
         voltages = getVoltageValues()
         averageNoise += float(voltages[1])
     averageNoise /= refVal
-    return averageNoise
+    return (averageNoise, averageNoise * 0.05)
 
 intervals = ([], [])
 ditVal = 0.5
@@ -32,14 +32,14 @@ def loop():
     # keeps track of if PS or PR is clicked
     highLow = [0, 0]
     
-    thresholds = [0.00, initialize()]
+    thresholds = [(0.10), initialize()]
     #print(thresholds)
     while True:
         voltages = getVoltageValues()
         #print(voltages)
         # check if click changed for PS and PR
         #print(thresholds)
-        for i in range(0, 2):
+        for i in range(0, 1):
             # check if analog read voltage of PS|PR >= threshold voltage
             if voltages[i] > thresholds[i]:
                 if highLow[i] == 0:
