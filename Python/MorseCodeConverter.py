@@ -40,7 +40,7 @@ class Morse():
                            '1': '.----', '2': '..---', '3': '...--',
                            '4': '....-', '5': '.....', '6': '-....',
                            '7': '--...', '8': '---..', '9': '----.',
-                           '0': '-----', ', ': '--..--', '.': '.-.-.-',
+                           '0': '-----', ',': '--..--', '.': '.-.-.-',
                            '?': '..--..', '/': '-..-.', '-': '-....-',
                            '(': '-.--.', ')': '-.--.-', ' ':'   '}
 
@@ -99,11 +99,6 @@ def morseToText(morse):
 
 def test():
 #put test cases in here
-
-    moresad = textToMorse("qwertyuiopsdfghjklzc vbnm1234567890".upper())
-    print(moresad)
-    print(morseToText(moresad))
-
     p=testMorse()
     for i in range(0,100):
         c = ''
@@ -112,7 +107,6 @@ def test():
         print(c)
         x = morseToText(textToMorse(c))
         assert(c==x)
-
 
 
     pass # for empty methods to pass the function
