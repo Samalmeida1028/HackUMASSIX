@@ -11,7 +11,7 @@ void loop() {
   Serial.flush();
   double photodiode = analogRead(A0);
   double pressureSens = analogRead(A4);
-  double values[2] = {photodiode, pressureSens};
+  double values[2] = {pressureSens, photodiode};
   Serial.print(String(values[0]) + "|" + String(values[1]) + "|");
   Serial.println();
 }

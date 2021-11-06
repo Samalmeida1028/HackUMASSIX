@@ -7,7 +7,7 @@ def getVoltageValues():
     #print(arduinoInput)
     voltageStrings = arduinoInput.decode("utf-8").split("|")
     #print(voltageStrings)
-    return (float(voltageStrings[1]), float(voltageStrings[0]))
+    return (float(voltageStrings[0]), float(voltageStrings[1]))
 
 def initialize():
     refVal = 10
@@ -24,30 +24,36 @@ dahVal = 1.5
 epsilon = 0.1
 
 def loop():
+    arduino.readline()
+    time.sleep(0.01)
+
     # keeps track of time between clicks
     intervalStart = [0, 0]
-    # keeps track of if PS or PR was clickled previously
-    prevHighLow = [0, 0]
-    # keeps track of if PS or PR is clicked currently
+    # keeps track of if PS or PR is clicked
     highLow = [0, 0]
     
     thresholds = [0.00, initialize()]
+    #print(thresholds)
     while True:
         voltages = getVoltageValues()
-
+        #print(voltages)
         # check if click changed for PS and PR
         #print(thresholds)
         for i in range(0, 2):
             # check if analog read voltage of PS|PR >= threshold voltage
             if voltages[i] > thresholds[i]:
                 if highLow[i] == 0:
-                    print("NICE1")
+                    #print("NICE1")
                     intervals[i].append(time.perf_counter() - intervalStart[i])
+                    if i == 0:
+                        print("PRESSURE")
+                    elif i == 1:
+                        print("Light")
                     print(intervals[i][-1])
                 highLow[i] = 1
             else:
                 if highLow[i] == 1:
-                    print("NICE2")
+                    #print("NICE2")
                     intervalStart[i] = time.perf_counter()
                 highLow[i] = 0
 
