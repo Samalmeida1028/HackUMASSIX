@@ -24,9 +24,11 @@ def textToOutput(input):
     print(morse)
     for char in morse:
         if char !=' ':
-            num = ord(char)//ord('.')
+            num = ord(char)//(ord('.'))
             instruct.append(instruction[num-1])
             instruct.append(space)
+        else:
+            instruct.append(space*)
     print(instruct)
 
 
