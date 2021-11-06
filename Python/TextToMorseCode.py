@@ -35,12 +35,12 @@ class Morse():
                                 '.-.': 'R', '...': 'S', '-': 'T',
                                 '..-': 'U', '...-': 'V', '.--': 'W',
                                 '-..-': 'X', '-.--': 'Y', '--..': 'Z',
-                                '1': '.----', '2': '..---', '3': '...--',
-                                '4': '....-', '5': '.....', '6': '-....',
-                                '7': '--...', '8': '---..', '9': '----.',
-                                '0': '-----', ', ': '--..--', '.': '.-.-.-',
-                                '?': '..--..', '/': '-..-.', '-': '-....-',
-                                '(': '-.--.', ')': '-.--.-', '   ': ' '}
+                                '.----':'1', '..---': '2', '...--':'3',
+                                '....-':'4', '.....':'5', '-....':'6',
+                                 '--...':'7', '---..':'8', '----.':'9',
+                                 '-----':'0',  '--..--':', ', '.-.-.-':'.',
+                                 '..--..':'?', '-..-.':'/',  '-....-':'-',
+                                 '-.--.':'(',  '-.--.-':')', '   ': ' ', '':''}
 
 
 
@@ -57,7 +57,20 @@ def textToMorse(sentence):
 def morseToText(morse):
     m = Morse()
     l = morse.split(' ')
-    return l
+
+    print (l)
+    cipher=''
+    #for letter in sentence:
+        #cipher += m.morse[letter] + ' '
+    i=0
+    while i<len(l):
+        if l[i]=='' and i+3< len(l) and l[i+3]=='':
+          cipher+=m.morse['   ']
+          i=i+3
+        else:
+            cipher += m.morse[l[i]]
+        i+=1
+    return cipher
 #.-. -_. = chinguun
 
 
@@ -67,8 +80,8 @@ def morseToText(morse):
 
 def test():
 #put test cases in here
-    moresad = textToMorse("CHINGUUN IS VERY SAD")
-    print(moresad)
+    moresad = textToMorse("qwertyuiopsdfghjklzcvbnm1234567890".upper())
+   # print(moresad)
     print(morseToText(moresad))
 
 
