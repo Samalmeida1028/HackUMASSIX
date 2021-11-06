@@ -14,7 +14,8 @@ import numpy as np
 
 
 def test():
-    #put test cases in here
+#put test cases in here
+    pass # for empty methods to pass the function
 
 if __name__ == '__main__':
     test()
