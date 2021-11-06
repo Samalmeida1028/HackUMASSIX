@@ -27,7 +27,6 @@ def textToOutput(input):
         morse = m.textToMorse(input)
     else:
         morse = input
-    print(morse)
     for char in morse:
         if char !=' ':
             num = ord(char)//(ord('.'))
@@ -35,7 +34,7 @@ def textToOutput(input):
             instruct.append((space,0))
         else:
             instruct.append((long,0))
-    print(instruct)
+    return instruct
 
 
 def test():
