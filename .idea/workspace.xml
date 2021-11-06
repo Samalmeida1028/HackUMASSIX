@@ -250,6 +250,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HACKUMASSIX$TextToMorseCode.coverage" NAME="TextToMorseCode Coverage Results" MODIFIED="1636176421260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
-    <SUITE FILE_PATH="coverage/HACKUMASSIX$arduinoRead.coverage" NAME="arduinoRead Coverage Results" MODIFIED="1636176574977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Arduino" />
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$arduinoRead.coverage" NAME="arduinoRead Coverage Results" MODIFIED="1636215442681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Arduino" />
   </component>
 </project>

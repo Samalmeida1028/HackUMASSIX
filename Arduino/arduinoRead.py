@@ -10,10 +10,15 @@ def loop():
         vPD = float(strings[0])
         vPS = float(strings[1])
 
+<<<<<<< HEAD
         pd = 0
         ps = 0
         if vPS >= 10.00:  # check if analog read voltage >= threshold voltage
             pd = 1
+=======
+        if vPS >= "10.00":  # check if analog read voltage >= threshold voltage
+            pd = "PD: 1"
+>>>>>>> 62db1478cdae4ac6f7d709c65c38ab043b64dd85
         else:
             pd = 0
 
