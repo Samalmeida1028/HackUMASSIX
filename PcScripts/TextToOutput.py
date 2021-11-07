@@ -1,4 +1,4 @@
-from PcScripts import MorseCodeConverter as m
+import MorseCodeConverter as m
 import serial
 
 def checkInput(input):
