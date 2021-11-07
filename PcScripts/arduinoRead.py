@@ -2,9 +2,9 @@ import serial
 import time
 import sys
 
-from MorseCodeConverter import morseToText
+from PcScripts import MorseCodeConverter
 
-arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000)      # initialize Arduino
+arduino = serial.Serial(port='COM9', baudrate=9600, timeout=1000)      # initialize Arduino
 
 def getVoltageValues():
     arduinoInput = arduino.readline()                # read from the serial line
@@ -142,4 +142,4 @@ def startArduinoInput():
 
 
 if __name__ == '__main__':
-    print(startArduinoInput())
+   print(startArduinoInput())
