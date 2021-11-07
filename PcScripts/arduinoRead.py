@@ -140,7 +140,7 @@ def startArduinoInput():
     print(res)
     return m.morseToText(res)
 
-def takeMachineInput(ditval):
+def takeMachineInput(ditVal):
     return m.morseToText(loop(1, ditVal, ditVal * 0.4)[0])
 
 
