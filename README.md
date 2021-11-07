@@ -1,5 +1,7 @@
 # HackUMASSIX
 
+
+[MORSE CODE](../main/README/morse-code-1024x682.jpq)
 Organisers: Samuel, Tirth, Arjun and Chinguun
 
 In this project, we build a MORSE code detector that takes in light pulses, sound pulses, and written English characters as input and compares that to the MORSE database to output a message in English or flash an LED in MORSE. 
