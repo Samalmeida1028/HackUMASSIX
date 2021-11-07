@@ -4,9 +4,9 @@ import time
 
 
 def writeToArduino(string):
-    arduino = serial.Serial(port='COM4', baudrate=115200, timeout=1)
+    arduino = serial.Serial(port='COM9', baudrate=115200, timeout=1)
     l = string
-    time.sleep(0.5)
+    time.sleep(0.75)
     for i in l:
         send = str(i)
         delay = 0.1
@@ -33,4 +33,5 @@ def writeToArduino(string):
 if __name__ == '__main__':
     string = input("Enter a string: ")
     l = t.textToOutput(string)
-    writeToArduino(string)
+    print(l)
+    writeToArduino(l)
