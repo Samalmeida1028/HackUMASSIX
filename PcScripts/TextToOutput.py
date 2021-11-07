@@ -1,4 +1,4 @@
-import MorseCodeConverter as m
+from PcScripts import MorseCodeConverter as m
 import serial
 
 def checkInput(input):
@@ -7,8 +7,6 @@ def checkInput(input):
         if char in input:
             return True
     return False
-
-
 
 def textToOutput(input):
     #takes in string of characters or morse code
@@ -54,10 +52,8 @@ def textToOutput(input):
         i += 1
     return instruct
 
-
 def test():
     print(textToOutput('The quick brown fox jumps over the lazy dog.'))
-
 
 if __name__ == '__main__':
     test()
