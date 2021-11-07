@@ -184,11 +184,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.arduinoRead" />
       <item itemvalue="Python.MorseCodeConverter" />
+      <item itemvalue="Python.TextToOutput" />
+      <item itemvalue="Python.arduinoRead" />
       <item itemvalue="Python.arduinoWrite" />
       <item itemvalue="Python.wtf" />
-      <item itemvalue="Python.TextToOutput" />
     </list>
     <recent_temporary>
       <list>
