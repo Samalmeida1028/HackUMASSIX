@@ -1,5 +1,5 @@
 import MorseCodeConverter as m
-
+import serial
 
 def checkInput(input):
     str = 'qwertyuiopasdfghjklzxcvbnm1234567890(),/?;:"'.upper()
@@ -18,23 +18,40 @@ def textToOutput(input):
     #long represents dah
     long = short*3
     #represents the possible options
-    instruction = (short, long)
+    instruction = (long, short)
     #represents the final output instructions for light
     instruct = []
-    #Re
-    space = 1
+    #Reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     if checkInput(input):
         morse = m.textToMorse(input)
     else:
         morse = input
     print(morse)
     for char in morse:
-        if char !=' ':
-            num = ord(char)//(ord('.'))
-            instruct.append((instruction[num-1],1))
-            instruct.append((space,0))
+        space = 1
+        if char != ' ':
+            num = ord(char)//((ord('-'))+1)
+            instruct.append((instruction[num],1))
         else:
-            instruct.append((long,0))
+            space = long
+        instruct.append((space,0))
+    i = 0
+    while i < len(instruct):
+        if instruct[i][1] == 0 and instruct[i][0] == long:
+            k = 0
+            j = 0
+            while k < 4:
+                if (i + k < len(instruct)):
+                    if instruct[i + k][1] == 0 and instruct[i + k][0] == long:
+                        k += 1
+                    else:
+                        break
+                else:
+                    break
+            if (k == 4):
+                instruct.pop(i)
+                i -= 1
+        i += 1
     return instruct
 
 
