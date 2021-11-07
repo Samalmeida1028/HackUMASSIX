@@ -2,7 +2,7 @@ import serial
 import time
 import sys
 
-import MorseCodeConverter
+from PcScripts import MorseCodeConverter as m
 
 arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000)      # initialize Arduino
 
@@ -138,7 +138,11 @@ def startArduinoInput():
     print("Now enter your message and wait %.2f seconds: " % (15 * ditVal))
     res = loop(inputType, ditVal, ditVal * 0.4)[0]
     print(res)
-    return morseToText(res)
+    return m.morseToText(res)
+
+def takeMachineInput(ditval):
+    return m.morseToText(loop(1, ditVal, ditVal * 0.4)[0])
+
 
 
 if __name__ == '__main__':
