@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="Wtf part 3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PcScripts/TextToOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/TextToOutput.py" afterDir="false" />
+    <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="Wooooo">
+      <change beforePath="$PROJECT_DIR$/Arduino/textToOut/textToOut.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino/textToOut/textToOut.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       <recent name="C:\Users\samue\Documents\GitHub\HACKUMASSIX\Python" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.TextToOutput">
+  <component name="RunManager" selected="Python.arduinoWrite">
     <configuration name="MorseCodeConverter" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -93,7 +93,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TextToOutput" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="TextToOutput" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="HACKUMASSIX" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -137,7 +137,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="arduinoWrite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="arduinoWrite" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="HACKUMASSIX" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -159,42 +159,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="wtf" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="HACKUMASSIX" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PcScripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PcScripts/wtf.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.MorseCodeConverter" />
       <item itemvalue="Python.arduinoRead" />
       <item itemvalue="Python.TextToOutput" />
       <item itemvalue="Python.arduinoWrite" />
-      <item itemvalue="Python.wtf" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.TextToOutput" />
-        <item itemvalue="Python.wtf" />
-        <item itemvalue="Python.arduinoWrite" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -222,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636250877997</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="FINALLY WORKS">
+      <created>1636253094710</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1636253094710</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Wooooo">
+      <created>1636255312628</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636255312628</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,16 +227,58 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Wtf" />
     <MESSAGE value="Wtf part 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wtf part 3" />
+    <MESSAGE value="FINALLY WORKS" />
+    <MESSAGE value="Wooooo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wooooo" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HACKUMASSIX$MorseCodeConverter__1_.coverage" NAME="MorseCodeConverter (1) Coverage Results" MODIFIED="1636233530961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
-    <SUITE FILE_PATH="coverage/HACKUMASSIX$arduinoWrite__1_.coverage" NAME="arduinoWrite (1) Coverage Results" MODIFIED="1636237475570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
-    <SUITE FILE_PATH="coverage/HACKUMASSIX$TextToMorseCode.coverage" NAME="MorseCodeConverter Coverage Results" MODIFIED="1636220111949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
-    <SUITE FILE_PATH="coverage/HACKUMASSIX$arduinoWrite.coverage" NAME="arduinoWrite Coverage Results" MODIFIED="1636233325862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Arduino" />
-    <SUITE FILE_PATH="coverage/HACKUMASSIX$wtf.coverage" NAME="wtf Coverage Results" MODIFIED="1636255347646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
-    <SUITE FILE_PATH="coverage/HACKUMASSIX$arduinoRead.coverage" NAME="arduinoRead Coverage Results" MODIFIED="1636218088644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Arduino" />
-    <SUITE FILE_PATH="coverage/HACKUMASSIX$TextToOutput.coverage" NAME="TextToOutput Coverage Results" MODIFIED="1636255374727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
-    <SUITE FILE_PATH="coverage/HACKUMASSIX$TextToOutput__1_.coverage" NAME="TextToOutput (1) Coverage Results" MODIFIED="1636237501073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
+  <component name="WindowStateProjectService">
+    <state x="0" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636253190788">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636253190788" />
+    <state width="938" height="240" key="GridCell.Tab.0.bottom" timestamp="1636255245743">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636255245743" />
+    <state width="938" height="240" key="GridCell.Tab.0.center" timestamp="1636255245742">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="240" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636255245742" />
+    <state width="938" height="240" key="GridCell.Tab.0.left" timestamp="1636255245742">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="240" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636255245742" />
+    <state width="938" height="240" key="GridCell.Tab.0.right" timestamp="1636255245743">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="240" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636255245743" />
+    <state width="938" height="342" key="GridCell.Tab.1.bottom" timestamp="1636251542802">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636251542802" />
+    <state width="938" height="342" key="GridCell.Tab.1.center" timestamp="1636251542802">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636251542802" />
+    <state width="938" height="342" key="GridCell.Tab.1.left" timestamp="1636251542802">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636251542802" />
+    <state width="938" height="342" key="GridCell.Tab.1.right" timestamp="1636251542802">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="342" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636251542802" />
+    <state x="117" y="282" key="MultipleFileMergeDialog" timestamp="1636253023996">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="117" y="282" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636253023996" />
+    <state x="72" y="240" key="Vcs.Push.Dialog.v2" timestamp="1636255314170">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="72" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636255314170" />
+    <state x="299" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636255102329">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="299" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636255102329" />
   </component>
 </project>

@@ -7,7 +7,7 @@ void setup() {
 void loop() {
   if (Serial.available()) {
     String input_data = Serial.readString();
-    int stall;
+    int stall = 0.5;
 
     Serial.println(input_data);
     bool on = false;

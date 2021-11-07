@@ -10,7 +10,7 @@ print(l)
 
 for i in l:
     send = str(i)
-    delay = 0
+    delay = 1
 
     if send == "2" or send == "3":                      # choose the delay value
         delay = 2
