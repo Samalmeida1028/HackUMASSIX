@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="Code to work on Arjun's laptop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PcScripts/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/demo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

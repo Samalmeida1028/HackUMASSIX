@@ -1,8 +1,8 @@
 import TextToOutput as t
-import serial
 import time
+from pySerialTransfer import pySerialTransfer as txfer
 from struct import *
-arduino = serial.Serial(port='COM9', baudrate=115200, timeout=.1)
+arduino = txfer.Serial(port='COM9', baudrate=115200, timeout=.1)
 
 string = input("Enter a string: ") # Taking input from user
 l = list(t.textToOutput(string))
