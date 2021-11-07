@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="Wtf part 3">
-      <change afterPath="$PROJECT_DIR$/PcScripts/wtf.py" afterDir="false" />
+    <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="FINALLY WORKS">
+      <change beforePath="$PROJECT_DIR$/.idea/HACKUMASSIX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HACKUMASSIX.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Arduino/textToOut/textToOut.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino/textToOut/textToOut.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" afterDir="false" />
@@ -72,7 +73,7 @@
       <recent name="C:\Users\samue\Documents\GitHub\HACKUMASSIX\Python" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.wtf">
+  <component name="RunManager" selected="Python.arduinoWrite">
     <configuration name="MorseCodeConverter" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -95,7 +96,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TextToOutput" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="TextToOutput" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="HACKUMASSIX" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -139,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="arduinoWrite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="arduinoWrite" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="HACKUMASSIX" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -161,42 +162,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="wtf" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="HACKUMASSIX" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PcScripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PcScripts/wtf.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.MorseCodeConverter" />
-      <item itemvalue="Python.TextToOutput" />
       <item itemvalue="Python.arduinoRead" />
+      <item itemvalue="Python.TextToOutput" />
       <item itemvalue="Python.arduinoWrite" />
-      <item itemvalue="Python.wtf" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.wtf" />
-        <item itemvalue="Python.arduinoWrite" />
-        <item itemvalue="Python.TextToOutput" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -224,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636250877997</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="FINALLY WORKS">
+      <created>1636253094710</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1636253094710</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,25 +223,30 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Wtf" />
     <MESSAGE value="Wtf part 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wtf part 3" />
+    <MESSAGE value="FINALLY WORKS" />
+    <option name="LAST_COMMIT_MESSAGE" value="FINALLY WORKS" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="938" height="240" key="GridCell.Tab.0.bottom" timestamp="1636252750915">
+    <state x="0" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636253190788">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636252750915" />
-    <state width="938" height="240" key="GridCell.Tab.0.center" timestamp="1636252750915">
+    <state x="0" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636253190788" />
+    <state width="938" height="240" key="GridCell.Tab.0.bottom" timestamp="1636255150655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="240" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636252750915" />
-    <state width="938" height="240" key="GridCell.Tab.0.left" timestamp="1636252750915">
+    <state width="938" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636255150655" />
+    <state width="938" height="240" key="GridCell.Tab.0.center" timestamp="1636255150655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="240" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636252750915" />
-    <state width="938" height="240" key="GridCell.Tab.0.right" timestamp="1636252750915">
+    <state width="938" height="240" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636255150655" />
+    <state width="938" height="240" key="GridCell.Tab.0.left" timestamp="1636255150655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="240" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636252750915" />
+    <state width="938" height="240" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636255150655" />
+    <state width="938" height="240" key="GridCell.Tab.0.right" timestamp="1636255150655">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="240" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636255150655" />
     <state width="938" height="342" key="GridCell.Tab.1.bottom" timestamp="1636251542802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -280,9 +263,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="938" height="342" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636251542802" />
-    <state x="72" y="240" key="Vcs.Push.Dialog.v2" timestamp="1636250880030">
+    <state x="117" y="282" key="MultipleFileMergeDialog" timestamp="1636253023996">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="72" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636250880030" />
+    <state x="117" y="282" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636253023996" />
+    <state x="72" y="240" key="Vcs.Push.Dialog.v2" timestamp="1636253098113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="72" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636253098113" />
+    <state x="299" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636255102329">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="299" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636255102329" />
   </component>
 </project>
