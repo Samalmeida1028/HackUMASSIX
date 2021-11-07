@@ -37,7 +37,6 @@ def textToOutput(input):
     while i < len(instruct):
         if instruct[i][1] == 0 and instruct[i][0] == long:
             k = 0
-            j = 0
             while k < 4:
                 if (i + k < len(instruct)):
                     if instruct[i + k][1] == 0 and instruct[i + k][0] == long:
@@ -52,7 +51,7 @@ def textToOutput(input):
         i += 1
     temp = ''
     for i in instruct:
-        temp += str(i[0]) + str(i[1])
+        temp += str(i[0] + i[1])
     instruct = temp
     return instruct
 
