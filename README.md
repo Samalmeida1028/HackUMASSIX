@@ -3,7 +3,7 @@
 
 __Organisers: Samuel, Tirth, Arjun and Chinguun__
 
-In this project, we build a MORSE code detector that takes in light pulses, sound pulses, and written English characters as input and compares that to the MORSE database to output a message in English or flash an LED in MORSE. 
+In this project, we build a [MORSE code](https://www.britannica.com/topic/Morse-Code) detector that takes in light pulses, sound pulses, and written English characters as input and compares that to the MORSE database to output a message in English or flash an LED in MORSE. 
 
 ## Programming: 
 We linked the Arduino IDE to PyCharm using the pyserial API. A simple .ino file was made to push into the Arduino Uno board which contained the startup instructions. This code is uploaded into the board. 
