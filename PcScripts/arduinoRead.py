@@ -2,7 +2,7 @@ import serial
 import time
 import sys
 
-from PcScripts import MorseCodeConverter
+import MorseCodeConverter
 
 arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000)      # initialize Arduino
 
