@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import serial
 from PcScripts import TextToOutput as t
 import time
+=======
+import TextToOutput as t
+import time
+from pySerialTransfer import pySerialTransfer as txfer
+from struct import *
+arduino = txfer.Serial(port='COM9', baudrate=115200, timeout=.1)
+>>>>>>> Arduino
 
 arduino = serial.Serial(port='COM4', baudrate=115200, timeout=1)
 
