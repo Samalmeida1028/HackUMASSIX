@@ -25,14 +25,16 @@ def textToOutput(input):
     else:
         morse = input
     print(morse)
-    for char in morse:
-        space = 1
-        if char != ' ':
-            num = ord(char)//((ord('-'))+1)
+    for i in range(len(morse)-1):
+        if morse[i] != ' ':
+            num = ord(morse[i])//((ord('-'))+1)
             instruct.append((instruction[num],1))
+        elif morse[i+1] == ' ':
+            space = short
+            instruct.append((space,0))
         else:
             space = long
-        instruct.append((space,0))
+            instruct.append((space, 0))
     i = 0
     while i < len(instruct):
         if instruct[i][1] == 0 and instruct[i][0] == long:
