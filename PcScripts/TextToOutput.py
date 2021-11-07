@@ -50,6 +50,10 @@ def textToOutput(input):
                 instruct.pop(i)
                 i -= 1
         i += 1
+    temp = ''
+    for i in instruct:
+        temp += str(i[0]) + str(i[1])
+    instruct = temp
     return instruct
 
 def test():
