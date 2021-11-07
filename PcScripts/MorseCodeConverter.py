@@ -70,25 +70,59 @@ def textToMorse(sentence):
     cipher = ''
     for letter in sentence:
         cipher += m.text[letter] + ' '
+    
     return cipher
 #chinguun = .-. ._.
 
 def morseToText(morse):
     m = Morse()
     l = morse.split(' ')
+    p=0
+    while p<len(l):
+        k=0
+        if l[p]=='':  
+            while k < 3:
+                if (p + k < len(l)):
+                    if l[p + k] =='':
+                        k=k+1
+                    else: 
+                        break
+                else:
+                    break      
+        if (k == 2):
+            l.insert(p,"")
+            p=p+2 
+        else:
+            p+=1
 
-    print (l)
+    #print (l)
     cipher=''
-    #for letter in sentence:
-        #cipher += m.morse[letter] + ' '
     i=0
     while i<len(l):
-        if l[i]=='' and i+3< len(l) and l[i+3]=='':
-          cipher+=m.morse['   ']
-          i=i+3
+        k=0
+        if l[i]=='':  
+            while k < 4:
+                if (i + k < len(l)):
+                    if l[i + k] =='':
+                        k=k+1
+                    else: 
+                        break
+                else:
+                    break
         else:
             cipher += m.morse[l[i]]
-        i+=1
+        if (k == 3):
+            cipher+=m.morse['   ']
+            i=i+3  
+        else:
+            i+=1
+
+        # if l[i]=='' and i+3< len(l) and l[i+3]=='':
+        #   cipher+=m.morse['   ']
+        #   i=i+3
+        # else:
+        #     cipher += m.morse[l[i]]
+        # i+=1
     return cipher
 #.-. -_. = chinguun
 
@@ -98,18 +132,21 @@ def morseToText(morse):
 
 
 def test():
+    p="...   ---   ..."
+    #print(textToMorse(ps))
+    print(morseToText(p))
 #put test cases in here
-    p=testMorse()
-    for i in range(0,100):
-        c = ''
-        for t in range(0,100):
-           c += p.charactersAvaliable[random.randint(1, 44)]
-        print(c)
-        x = morseToText(textToMorse(c))
-        assert(c==x)
-    inp = 'help me'.upper()
-    x = textToMorse(inp)
-    print(x)
+    # p=testMorse()
+    # for i in range(0,100):
+    #     c = ''
+    #     for t in range(0,100):
+    #        c += p.charactersAvaliable[random.randint(1, 44)]
+    #     print(c)
+    #     x = morseToText(textToMorse())
+    #     assert(c==x)
+    # inp = 'help me'.upper()
+    # x = textToMorse(inp)
+    # print(x)
 
 
     pass # for empty methods to pass the function

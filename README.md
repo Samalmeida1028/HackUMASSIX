@@ -105,3 +105,4 @@ After this, it was time to actually create the logic. We first created a diction
   ```
   
   This was the easy part. The harder part ws converting to morse code back into english as we had to account for some elements being the prefixes for others. For example, E in morse code is just '.' but that is also the start of 'L', 'P', 'S' etc. So we had to take this into consideration when we solved it. Our solution was to append spaces to the end for every character, as in morse code they denote a change of character by 3 *"dits"* which is the short signal.
+

@@ -4,7 +4,7 @@ import sys
 
 import MorseCodeConverter as m
 
-arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000)      # initialize Arduino
+arduino = serial.Serial(port='COM9', baudrate=9600, timeout=1000)      # initialize Arduino
 
 def getVoltageValues():
     arduinoInput = arduino.readline()                # read from the serial line
@@ -146,4 +146,4 @@ def takeMachineInput(ditval):
 
 
 if __name__ == '__main__':
-    print(startArduinoInput())
+   print(startArduinoInput())
