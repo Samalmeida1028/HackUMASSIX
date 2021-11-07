@@ -8,14 +8,15 @@ string = input("Enter a string: ")
 l = t.textToOutput(string)
 print(l)
 
+time.sleep(0.5)
 for i in l:
     send = str(i)
-    delay = 1
+    delay = 0.1
 
     if send == "2" or send == "3":                      # choose the delay value
-        delay = 2
-    else:                                               # can only be 6 or 7 if not 2 or 3
-        delay = 6
+        delay = .6
+    elif send != "1":                                   # can only be 6 or 7 if not 2 or 3
+        delay = 3
 
     arduino.write(bytes(send, 'utf-8'))
     data = arduino.readline().decode('utf-8')

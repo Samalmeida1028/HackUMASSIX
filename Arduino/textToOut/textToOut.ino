@@ -1,6 +1,3 @@
-#include "SerialTransfer.h"
-
-
 void setup() {
   Serial.begin(115200);
   pinMode(7, OUTPUT);
@@ -10,16 +7,9 @@ void setup() {
 void loop() {
   if (Serial.available()) {
     String input_data = Serial.readString();
-    int stall = 0.5;
 
     Serial.println(input_data);
     bool on = false;
-
-    if (input_data == "2" || input_data == "3") {
-      stall = 2;
-    } else {
-      stall = 6;
-    }
     
     if (input_data == "3" || input_data == "7") {
       on = true;
@@ -30,6 +20,5 @@ void loop() {
     } else {
       digitalWrite(7, LOW);
     }
-    delay(stall * 250);
   }
 }
