@@ -1,29 +1,32 @@
 void setup() {
   Serial.begin(115200);
   pinMode(7, OUTPUT);
+  digitalWrite(7, LOW);
 }
 
 void loop() {
   if (Serial.available()) {
     String input_data = Serial.readString();
-    int data[2];
+    int stall;
 
-    for (int i = 0; i < input_data.length(); i++) {
-      data[i] = input_data[i];
-    }
     Serial.println(input_data);
-    bool low_high;
+    bool on = false;
 
-    if (input_data[1] == 0) {
-      low_high = false;
+    if (input_data == "2" || input_data == "3") {
+      stall = 2;
     } else {
-      low_high = true;
+      stall = 6;
+    }
+    
+    if (input_data == "3" || input_data == "7") {
+      on = true;
     }
 
-    if (low_high) {
+    if (on) {
       digitalWrite(7, HIGH);
     } else {
       digitalWrite(7, LOW);
     }
+    delay(stall * 250);
   }
 }
