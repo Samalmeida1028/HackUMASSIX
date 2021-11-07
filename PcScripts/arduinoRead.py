@@ -14,7 +14,7 @@ def initialize(arduino):
             averageNoise += temp[1]
             refVal += 1
     averageNoise /= refVal
-    return averageNoise + 50
+    return averageNoise + 35
 
 # initialize Arduino
 def calibrate(inputType, arduino):
@@ -120,7 +120,7 @@ def getVoltageValues(arduino):
     arduinoInput = arduino.readline()                # read from the serial line
     #print(arduinoInput)
     voltageStrings = arduinoInput.decode("utf-8").split("|")
-    #print(voltageStrings)
+    print(voltageStrings)
     try:
         num1 = float(voltageStrings[0])
         num2 = float(voltageStrings[1])

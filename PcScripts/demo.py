@@ -7,9 +7,11 @@ receive = True
 firstReceive = True
 
 toSend = "ALEXANDER GRAHAM BELL"
+ditval = 1.4
 if receive:
     arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000) 
-    ditVal = ar.calibrate(1, arduino)
+    if firstReceive:
+        ditVal = ar.calibrate(1, arduino)
     print("CHECKPOINT %.4f" % ditVal)
     print(ar.takeMachineInput(ditVal, arduino))
 else:
