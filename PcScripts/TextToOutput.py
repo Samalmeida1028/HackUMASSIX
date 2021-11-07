@@ -1,4 +1,4 @@
-import MorseCodeConverter as m
+from PcScripts import MorseCodeConverter as m
 import serial
 
 def checkInput(input):
@@ -7,8 +7,6 @@ def checkInput(input):
         if char in input:
             return True
     return False
-
-
 
 def textToOutput(input):
     #takes in string of characters or morse code
@@ -27,19 +25,21 @@ def textToOutput(input):
     else:
         morse = input
     print(morse)
-    for char in morse:
-        space = 1
-        if char != ' ':
-            num = ord(char)//((ord('-'))+1)
+    for i in range(len(morse)-1):
+        if morse[i] != ' ':
+            num = ord(morse[i])//((ord('-'))+1)
             instruct.append((instruction[num],1))
+            instruct.append((1, 0))
+        elif morse[i+1] == ' ':
+            space = short
+            instruct.append((space,0))
         else:
             space = long
-        instruct.append((space,0))
+            instruct.append((space, 0))
     i = 0
     while i < len(instruct):
         if instruct[i][1] == 0 and instruct[i][0] == long:
             k = 0
-            j = 0
             while k < 4:
                 if (i + k < len(instruct)):
                     if instruct[i + k][1] == 0 and instruct[i + k][0] == long:
@@ -52,12 +52,14 @@ def textToOutput(input):
                 instruct.pop(i)
                 i -= 1
         i += 1
+    temp = ''
+    for i in instruct:
+        temp += str(i[0] + i[1])
+    instruct = temp
     return instruct
-
 
 def test():
     print(textToOutput('The quick brown fox jumps over the lazy dog.'))
-
 
 if __name__ == '__main__':
     test()
