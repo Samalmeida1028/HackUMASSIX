@@ -1,14 +1,14 @@
 # HackUMASSIX
 
 
-Organisers: Samuel, Tirth, Arjun and Chinguun
+__Organisers: Samuel, Tirth, Arjun and Chinguun__
 
 In this project, we build a MORSE code detector that takes in light pulses, sound pulses, and written English characters as input and compares that to the MORSE database to output a message in English or flash an LED in MORSE. 
 
 ## Programming: 
 We linked the Arduino IDE to PyCharm using the pyserial API. A simple .ino file was made to push into the Arduino Uno board which contained the startup instructions. This code is uploaded into the board. 
 
-In the Python IDE, we use the pyserial API to create an object reference to the Arduino board. Then, we can read the Serial line. This line will output a string with two values in it separated by a "|". The first value is the voltage from the photodiode (PD) and the second value is the value from the pressure sensor (PS). 
+In the Python IDE, we use the [pyserial API](https://pyserial.readthedocs.io/en/latest/pyserial_api.html) to create an object reference to the Arduino board. Then, we can read the Serial line. This line will output a string with two values in it separated by a "|". The first value is the voltage from the [photoresistor)](https://arduinomodules.info/ky-018-photoresistor-module/) (PD) and the second value is the value from a [force sensitive resistor](https://learn.adafruit.com/force-sensitive-resistor-fsr) (PS). 
 
 The code snipped below shows the Arduino startup code. 
 ```
