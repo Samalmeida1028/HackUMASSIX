@@ -11,7 +11,7 @@ void loop() {
   double photodiode = analogRead(A0);
   double pressureSens = analogRead(A4);
   double values[2] = {pressureSens, photodiode};
-  if(Serial.availableForWrite() > sizeof(String(values[0]) + "|" + String(values[1]) + "|\r\n")){
+  if(Serial.availableForWrite() > 16){
     Serial.println(String(values[0]) + "|" + String(values[1]) + "|");
   }
 }

@@ -1,5 +1,5 @@
 import serial
-from PcScripts import TextToOutput as t
+import TextToOutput as t
 import time
 
 
@@ -23,7 +23,7 @@ def config(arduino):
         time.sleep(delay * 0.25)
 
 def writeToArduino(string):
-    arduino = serial.Serial(port='COM9', baudrate=115200, timeout=2)
+    arduino = serial.Serial(port='COM3', baudrate=115200, timeout=2)
     l = string
     config(arduino)
     for i in l:

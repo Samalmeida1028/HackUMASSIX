@@ -1,16 +1,17 @@
+import serial
 import TextToOutput as T
 import arduinoRead as ar
 import arduinoWrite as aw
 
-receive = False
+receive = True
 firstReceive = True
 
 toSend = "ALEXANDER GRAHAM BELL"
 if receive:
-    if firstReceive:
-        calibration1 = ar.loop(1, 0.75, 0.3)
-        ditVal = ar.calculateOddAverage(calibration1[1])
-    print(ar.testMachineInput(ditVal))
+    arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000) 
+    ditVal = ar.calibrate(1, arduino)
+    print("CHECKPOINT %.4f" % ditVal)
+    print(ar.takeMachineInput(ditVal, arduino))
 else:
     transformed = T.textToOutput(toSend)
     aw.writeToArduino(transformed)
