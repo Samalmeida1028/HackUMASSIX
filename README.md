@@ -72,10 +72,12 @@ Notice the values 3 and 7 in the Arduino code. Below, we talk about what these a
 
 ## The Possibilities
 For our blinker, we have 4 possibilities:
+```
 A. The input tuple is (2 seconds, OFF (0)): The sum is 2, delay is 2 seconds, ON is false
 B. The input tuple is (2 seconds, ON (1)): The sum is 3, delay is 2 seconds, ON is true
 C. The input tuple is (6 seconds, OFF (0)): The sum is 6, delay is 6 seconds, ON is false
 D. The input tuple is (6 seconds, ON (1)): The sum is 7, delay is 6 seconds, ON is true
+```
 
 Given these four possibilities as input chars (2, 3, 6, 7), we have to set the appropriate delays and ON booleans such that the correct blinks are outputted by the LEDs. 
 
