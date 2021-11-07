@@ -1,5 +1,4 @@
 import time
-import numpy as np
 from pySerialTransfer import pySerialTransfer as txfer
 from PcScripts import TextToOutput as t
 
@@ -9,6 +8,7 @@ if __name__ == '__main__':
 
         link.open()
         time.sleep(2)  # allow some time for the Arduino to completely reset
+        send_size = 0
 
         ###################################################################
         # Send a list
@@ -16,20 +16,14 @@ if __name__ == '__main__':
         string = input("Enter a string: ")
         l = t.textToOutput(string)
         print(l)
-        for i in l:
-            send_size = 0
-            str_ = str(i[0]) + str(i[1])
-            str_size = link.tx_obj(str_)
-            send_size += str_size
-            link.send(send_size)
-
-            rec_str_ = link.rx_obj(obj_type=type(str),
-                                    obj_byte_size=str_size,
-                                    list_format='i')
-
-            print('SENT: {}'.format(str_))
-            print('RCVD: {}'.format(rec_str_))
-            print(' ')
+        a = ''
+        for x in l:
+            a += str(x[0])
+            a += str(x[1])
+        print(a)
+        list_size = link.tx_obj(a)
+        send_size += list_size
+        link.send(send_size)
 
         ###################################################################
         # Wait for a response and report any errors while receiving packets
@@ -45,9 +39,16 @@ if __name__ == '__main__':
                 else:
                     print('ERROR: {}'.format(link.status))
 
-        ###################################################################
+        # ###################################################################
         # Parse response list
-        ###################################################################
+        # ###################################################################
+        rec_list_ = link.rx_obj(obj_type=type(a),
+                                obj_byte_size=list_size,
+                                list_format='i')
+
+        print('SENT: {}'.format(a))
+        print('RCVD: {}'.format(rec_list_))
+        print(' ')
 
     except KeyboardInterrupt:
         try:

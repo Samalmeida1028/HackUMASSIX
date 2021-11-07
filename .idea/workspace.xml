@@ -19,14 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="Code to work on Arjun's laptop">
-      <change afterPath="$PROJECT_DIR$/PcScripts/wtf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/HACKUMASSIX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HACKUMASSIX.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="Wtf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/textToOut/textToOut.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino/textToOut/textToOut.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PcScripts/TextToOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/TextToOutput.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Arduino/wtfFolder/wtfScript/wtfScript.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino/wtfFolder/wtfScript/wtfScript.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PcScripts/wtf.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/wtf.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +178,14 @@
       <workItem from="1636228513250" duration="319000" />
       <workItem from="1636228851942" duration="7864000" />
     </task>
+    <task id="LOCAL-00001" summary="Wtf">
+      <created>1636248892878</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636248892878</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,31 +203,39 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Wtf" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wtf" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="828" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636246598448">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636246598448" />
-    <state width="936" height="274" key="GridCell.Tab.0.bottom" timestamp="1636248850870">
+    <state width="936" height="274" key="GridCell.Tab.0.bottom" timestamp="1636250016678">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636248850870" />
-    <state width="936" height="274" key="GridCell.Tab.0.center" timestamp="1636248850870">
+    <state width="936" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636250016678" />
+    <state width="936" height="274" key="GridCell.Tab.0.center" timestamp="1636250016678">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636248850870" />
-    <state width="936" height="274" key="GridCell.Tab.0.left" timestamp="1636248850870">
+    <state width="936" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636250016678" />
+    <state width="936" height="274" key="GridCell.Tab.0.left" timestamp="1636250016678">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636248850870" />
-    <state width="936" height="274" key="GridCell.Tab.0.right" timestamp="1636248850870">
+    <state width="936" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636250016678" />
+    <state width="936" height="274" key="GridCell.Tab.0.right" timestamp="1636250016678">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636248850870" />
+    <state width="936" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636250016678" />
     <state x="368" y="86" key="MergeDialog" timestamp="1636237777249">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="368" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636237777249" />
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2" timestamp="1636248901190">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="72" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636248901190" />
     <state x="1259" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636237752933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
