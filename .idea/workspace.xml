@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="Final changes to english to MORSE converter.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Arduino/textToOut/textToOut.ino" beforeDir="false" afterPath="$PROJECT_DIR$/Arduino/textToOut/textToOut.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PcScripts/arduinoRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/arduinoRead.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,6 +215,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PcScripts/arduinoWrite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -308,54 +307,15 @@
     <MESSAGE value="Wooooo" />
     <option name="LAST_COMMIT_MESSAGE" value="Wooooo" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="0" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636256491820">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="0" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636256491820" />
-    <state width="938" height="240" key="GridCell.Tab.0.bottom" timestamp="1636256454827">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="938" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636256454827" />
-    <state width="938" height="240" key="GridCell.Tab.0.center" timestamp="1636256454826">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="938" height="240" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636256454826" />
-    <state width="938" height="240" key="GridCell.Tab.0.left" timestamp="1636256454826">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="938" height="240" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636256454826" />
-    <state width="938" height="240" key="GridCell.Tab.0.right" timestamp="1636256454826">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="938" height="240" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636256454826" />
-    <state width="938" height="342" key="GridCell.Tab.1.bottom" timestamp="1636256344797">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="938" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1636256344797" />
-    <state width="938" height="342" key="GridCell.Tab.1.center" timestamp="1636256344797">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="938" height="342" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1636256344797" />
-    <state width="938" height="342" key="GridCell.Tab.1.left" timestamp="1636256344797">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="938" height="342" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1636256344797" />
-    <state width="938" height="342" key="GridCell.Tab.1.right" timestamp="1636256344797">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="938" height="342" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1636256344797" />
-    <state x="117" y="282" key="MultipleFileMergeDialog" timestamp="1636253023996">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="117" y="282" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1636253023996" />
-    <state x="72" y="240" key="Vcs.Push.Dialog.v2" timestamp="1636255314170">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="72" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636255314170" />
-    <state x="299" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636255102329">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="299" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1636255102329" />
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$MorseCodeConverter__1_.coverage" NAME="MorseCodeConverter (1) Coverage Results" MODIFIED="1636233530961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$arduinoWrite__1_.coverage" NAME="arduinoWrite (1) Coverage Results" MODIFIED="1636237475570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$TextToMorseCode.coverage" NAME="MorseCodeConverter Coverage Results" MODIFIED="1636220111949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$arduinoWrite.coverage" NAME="arduinoWrite Coverage Results" MODIFIED="1636233325862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Arduino" />
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$writeArduino.coverage" NAME="writeArduino Coverage Results" MODIFIED="1636257084946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$wtf.coverage" NAME="wtf Coverage Results" MODIFIED="1636255347646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$arduinoRead.coverage" NAME="arduinoRead Coverage Results" MODIFIED="1636218088644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Arduino" />
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$TextToOutput.coverage" NAME="TextToOutput Coverage Results" MODIFIED="1636255374727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
+    <SUITE FILE_PATH="coverage/HACKUMASSIX$TextToOutput__1_.coverage" NAME="TextToOutput (1) Coverage Results" MODIFIED="1636237501073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PcScripts" />
   </component>
 </project>
