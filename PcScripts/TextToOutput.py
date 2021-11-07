@@ -29,6 +29,7 @@ def textToOutput(input):
         if morse[i] != ' ':
             num = ord(morse[i])//((ord('-'))+1)
             instruct.append((instruction[num],1))
+            instruct.append((1, 0))
         elif morse[i+1] == ' ':
             space = short
             instruct.append((space,0))
