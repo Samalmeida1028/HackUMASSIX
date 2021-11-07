@@ -2,7 +2,10 @@ import serial
 import time
 import sys
 
+from MorseCodeConverter import morseToText
+
 arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000)      # initialize Arduino
+
 def getVoltageValues():
     arduinoInput = arduino.readline()                # read from the serial line
     #print(arduinoInput)
@@ -17,7 +20,7 @@ def initialize():
         voltages = getVoltageValues()
         averageNoise += float(voltages[1])
     averageNoise /= refVal
-    return (averageNoise, averageNoise * 0.05)
+    return averageNoise * 1.05
 
 intervals = ([], [])
 
@@ -25,50 +28,69 @@ ditVal = 1
 dahVal = 3
 epsilon = 0.4
 
-def loop():
+def loop(inputType):
 
+    finalResult = ''
+
+    #Flush buffer
     arduino.readline()
     time.sleep(0.01)
 
-    # keeps track of time between clicks
-    tempTime = time.perf_counter()
-    intervalStart = [tempTime, tempTime]
     # keeps track of if PS or PR is clicked
     highLow = [0, 0]
+    # intervalStart keeps track of time between clicks
+    intervalStart = time.perf_counter()
+    # When was the interval last updated? 
+    # and should we update the result string since new interval value was inserted?
+    latestEdit = [time.perf_counter(), False]
     
-    thresholds = [(0.10), initialize()]
-    #print(thresholds)
+    if inputType:
+        threshold = initialize()
+    else:
+        threshold = 0.10
+
     while True:
         voltages = getVoltageValues()
 
-        # check if click changed for PS and PR
-        for i in range(0, 1):
-            # check if analog read voltage of PS|PR >= threshold voltage
-            if voltages[i] > thresholds[i]:
-                if highLow[i] == 0:
-                    intervals[i].append(time.perf_counter() - intervalStart[i])
-                    intervalStart[i] = time.perf_counter()
-                highLow[i] = 1
-            else:
-                if highLow[i] == 1:
-                    intervals[i].append(time.perf_counter() - intervalStart[i])
-                    intervalStart[i] = time.perf_counter()
-                highLow[i] = 0
+        # check if analog read voltage of PS|PR >= threshold voltage
+        if voltages[inputType] > threshold:
+            if highLow[inputType] == 0:
+                intervals[inputType].append(time.perf_counter() - intervalStart)
+                intervalStart = time.perf_counter()
+                latestEdit = [time.perf_counter(), True]
+            highLow[inputType] = 1
+        else:
+            if highLow[inputType] == 1:
+                intervals[inputType].append(time.perf_counter() - intervalStart)
+                intervalStart = time.perf_counter()
+                latestEdit = [time.perf_counter(), True]
+            highLow[inputType] = 0
 
-        print(intervalsToMorse())
+        if latestEdit[1]:
+            result = intervalsToMorse(inputType)
+            if result == -1:
+                break
+            else:
+                finalResult = result
+                latestEdit[1] = False
+        elif (time.perf_counter() - latestEdit[0]) > (15 * ditVal):
+            break
+    return morseToText(finalResult)
+
+
 def withinRange(toCheck, correctVal):
     return abs(toCheck - correctVal) < epsilon
 
-def intervalsToMorse():
+def intervalsToMorse(inputType):
     result = ""
     i = 0
-    for interval in intervals[0]:
+    for interval in intervals[inputType]:
         if i == 0:
             i += 1
             continue
         elif i % 2 == 0:
             if interval > (15 * ditVal):
-                sys.exit()
+                return -1
             elif interval > (6 * ditVal):
                 result += "   "
             elif interval > (3 * ditVal):
@@ -84,4 +106,4 @@ def intervalsToMorse():
     return result
 
 if __name__ == '__main__':
-    loop()
+    print(loop(1))
