@@ -117,12 +117,6 @@ def morseToText(morse):
         else:
             i+=1
 
-        # if l[i]=='' and i+3< len(l) and l[i+3]=='':
-        #   cipher+=m.morse['   ']
-        #   i=i+3
-        # else:
-        #     cipher += m.morse[l[i]]
-        # i+=1
     return cipher
 #.-. -_. = chinguun
 
