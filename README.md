@@ -35,6 +35,30 @@ else:
 ```
 
 Since the PD has more sensitivity than the PS, it will have a higher offset voltage to begin with depending on how well lit the environment is. So the threshold value of the PD will be higher than that of the PS, since the PS starts from 0 as no force is applied to begin with. 
+## MORSE Code
+
+After this, it was time to actually create the logic. We first created a dictionary that stored pairs of values to look in, and had each character used in english and its corresponding morse code translation.
+
+```
+        self.text = {'A': '.-', 'B': '-...',
+                           'C': '-.-.', 'D': '-..', 'E': '.',
+                           'F': '..-.', 'G': '--.', 'H': '....',
+                           'I': '..', 'J': '.---', 'K': '-.-',
+                           'L': '.-..', 'M': '--', 'N': '-.',
+                           'O': '---', 'P': '.--.', 'Q': '--.-',
+                           'R': '.-.', 'S': '...', 'T': '-',
+                           'U': '..-', 'V': '...-', 'W': '.--',
+                           'X': '-..-', 'Y': '-.--', 'Z': '--..',
+                           '1': '.----', '2': '..---', '3': '...--',
+                           '4': '....-', '5': '.....', '6': '-....',
+                           '7': '--...', '8': '---..', '9': '----.',
+                           '0': '-----', ',': '--..--', '.': '.-.-.-',
+                           '?': '..--..', '/': '-..-.', '-': '-....-',
+                           '(': '-.--.', ')': '-.--.-', ' ':'   '}
+  ```
+  
+  This was the easy part. The harder part ws converting to morse code back into english as we had to account for some elements being the prefixes for others. For example, E in morse code is just '.' but that is also the start of 'L', 'P', 'S' etc. So we had to take this into consideration when we solved it. Our solution was to append spaces to the end for every character, as in morse code they denote a change of character by 3 *"dits"* which is the short signal.
+
 
 ## Programming Write Functions:
 For the English to MORSE conversion, we had to take a different approach. The circuit was wired such that the input string was converted into a string of chars which hold the sum of the time delay on each blink and whether the LED is on or not, so ```sum = time + on/off``` and in our final string we will have a series of these. 
@@ -81,28 +105,4 @@ D. The input tuple is (6 seconds, ON (1)): The sum is 7, delay is 6 seconds, ON 
 
 Given these four possibilities as input chars (2, 3, 6, 7), we have to set the appropriate delays and ON booleans such that the correct blinks are outputted by the LEDs. 
 
-
-## MORSE Code
-
-After this, it was time to actually create the logic. We first created a dictionary that stored pairs of values to look in, and had each character used in english and its corresponding morse code translation.
-
-```
-        self.text = {'A': '.-', 'B': '-...',
-                           'C': '-.-.', 'D': '-..', 'E': '.',
-                           'F': '..-.', 'G': '--.', 'H': '....',
-                           'I': '..', 'J': '.---', 'K': '-.-',
-                           'L': '.-..', 'M': '--', 'N': '-.',
-                           'O': '---', 'P': '.--.', 'Q': '--.-',
-                           'R': '.-.', 'S': '...', 'T': '-',
-                           'U': '..-', 'V': '...-', 'W': '.--',
-                           'X': '-..-', 'Y': '-.--', 'Z': '--..',
-                           '1': '.----', '2': '..---', '3': '...--',
-                           '4': '....-', '5': '.....', '6': '-....',
-                           '7': '--...', '8': '---..', '9': '----.',
-                           '0': '-----', ',': '--..--', '.': '.-.-.-',
-                           '?': '..--..', '/': '-..-.', '-': '-....-',
-                           '(': '-.--.', ')': '-.--.-', ' ':'   '}
-  ```
-  
-  This was the easy part. The harder part ws converting to morse code back into english as we had to account for some elements being the prefixes for others. For example, E in morse code is just '.' but that is also the start of 'L', 'P', 'S' etc. So we had to take this into consideration when we solved it. Our solution was to append spaces to the end for every character, as in morse code they denote a change of character by 3 *"dits"* which is the short signal.
 
