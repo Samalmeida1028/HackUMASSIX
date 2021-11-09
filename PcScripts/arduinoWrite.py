@@ -2,7 +2,6 @@ import serial
 import TextToOutput as t
 import time
 
-
 def config(arduino):
     time.sleep(1)
     l = '313131313166'
@@ -15,7 +14,7 @@ def config(arduino):
             delay = 5
 
         arduino.write(bytes(send, 'utf-8'))
-        data = arduino.readline().decode('utf-8')
+        data = arduino.readline().decode('utf-8')           # return value from arduino
         time.sleep(delay * 0.25)
 
 def writeToArduino(string):
@@ -41,10 +40,8 @@ def writeToArduino(string):
             print('success, %s received' %(send))
         else:
             print('failed')
-        time.sleep(delay*.25)                           # Blink LED
-          # LED kill sequence after code executes
-
-
+        time.sleep(delay*.25)                               # Blink LED
+        # LED kill sequence after code executes
 
 if __name__ == '__main__':
     string = input('Enter input String: ')
