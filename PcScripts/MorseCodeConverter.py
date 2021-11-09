@@ -60,10 +60,6 @@ class Morse():
                                  '..--..':'?', '-..-.':'/',  '-....-':'-',
                                  '-.--.':'(',  '-.--.-':')', '   ': ' ', '':''}
 
-
-
-
-
 def textToMorse(sentence):
     m = Morse()
     print(sentence)
@@ -120,11 +116,6 @@ def morseToText(morse):
     return cipher
 #.-. -_. = chinguun
 
-
-
-
-
-
 def test():
     p="...   ---   ..."
     #print(textToMorse(ps))
@@ -141,7 +132,6 @@ def test():
     # inp = 'help me'.upper()
     # x = textToMorse(inp)
     # print(x)
-
 
     pass # for empty methods to pass the function
 

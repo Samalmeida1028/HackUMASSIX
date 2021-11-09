@@ -18,7 +18,6 @@ def initialize(arduino):
 
 # initialize Arduino
 def calibrate(inputType, arduino):
-    #arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000) 
     threshold = initialize(arduino)
     intervals = []
     highLow = [0, 0]
@@ -44,20 +43,12 @@ def calibrate(inputType, arduino):
                 break
     return calculateOddAverage(intervals)
 
-
-
 def loop(inputType, ditVal, epsilon, arduino):
-
     intervals = []
-
-    finalResult = ''
-
-    # keeps track of if PS or PR is clicked
-    highLow = [0, 0]
-    # intervalStart keeps track of time between clicks
-    intervalStart = time.perf_counter()
-    # When was the interval last updated? 
-    # and should we update the result string since new interval value was inserted?
+    finalResult = ''                    # keeps track of if PS or PR is clicked
+    highLow = [0, 0]                    # intervalStart keeps track of time between clicks
+    intervalStart = time.perf_counter() # When was the interval last updated?
+                                        # and should we update the result string since new interval value was inserted?
     latestEdit = [time.perf_counter(), False]
     
     threshold = initialize(arduino)
@@ -66,8 +57,7 @@ def loop(inputType, ditVal, epsilon, arduino):
         voltages = getVoltageValues(arduino)
         if voltages == -1:
             continue
-        else:
-            # check if analog read voltage of PS|PR >= threshold voltage
+        else:                           # check if analog read voltage of PS|PR >= threshold voltage
             if voltages[inputType] > threshold:
                 if highLow[inputType] == 0:
                     intervals.append(time.perf_counter() - intervalStart)
@@ -173,8 +163,6 @@ def startArduinoInput():
 
 def takeMachineInput(ditVal, arduino):
     return m.morseToText(loop(1, ditVal, ditVal * 0.3, arduino)[0])
-
-
 
 if __name__ == '__main__':
    print(startArduinoInput())

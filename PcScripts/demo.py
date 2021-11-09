@@ -21,5 +21,3 @@ else:
     transformed = T.textToOutput(toSend)
     print(transformed)
     aw.writeToArduino(transformed)
-
-
