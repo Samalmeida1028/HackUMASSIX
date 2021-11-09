@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="Updated delay times and general robustness">
-      <change beforePath="$PROJECT_DIR$/.idea/HACKUMASSIX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HACKUMASSIX.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="50c5e6c8-b609-4b06-be26-f573fef2bdb2" name="Changes" comment="Formatted code to look good.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PcScripts/MorseCodeConverter.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/MorseCodeConverter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PcScripts/arduinoRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/arduinoRead.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/arduinoWrite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PcScripts/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/PcScripts/demo.py" afterDir="false" />
     </list>
@@ -313,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636255312628</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Formatted code to look good.">
+      <created>1636485283762</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636485283762</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +339,7 @@
     <MESSAGE value="Wtf part 3" />
     <MESSAGE value="FINALLY WORKS" />
     <MESSAGE value="Wooooo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wooooo" />
+    <MESSAGE value="Formatted code to look good." />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatted code to look good." />
   </component>
 </project>
