@@ -1,23 +1,25 @@
-from typing import final
-import serial
 import time
-import sys
+import serial
 
 import MorseCodeConverter as m
 
+#   TODO: make threshold based off of difference between input and ambient light
 def initialize(arduino):
     refVal = 0
     averageNoise = 0
+
     while refVal < 10:
         temp = getVoltageValues(arduino)
         if temp != -1:
             averageNoise += temp[1]
             refVal += 1
     averageNoise /= refVal
+
     return averageNoise + 35
 
 # initialize Arduino
 def calibrate(inputType, arduino):
+    arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1000)
     threshold = initialize(arduino)
     intervals = []
     highLow = [0, 0]
@@ -37,27 +39,28 @@ def calibrate(inputType, arduino):
                 if highLow[inputType] == 1:
                     intervals.append(time.perf_counter() - intervalStart)
                     intervalStart = time.perf_counter()
-                    latestEdit = [time.perf_counter(), True]
+                    #latestEdit = [time.perf_counter(), True]
                 highLow[inputType] = 0
             if len(intervals) >= 8:
                 break
+
     return calculateOddAverage(intervals)
+
 
 def loop(inputType, ditVal, epsilon, arduino):
     intervals = []
-    finalResult = ''                    # keeps track of if PS or PR is clicked
-    highLow = [0, 0]                    # intervalStart keeps track of time between clicks
-    intervalStart = time.perf_counter() # When was the interval last updated?
-                                        # and should we update the result string since new interval value was inserted?
-    latestEdit = [time.perf_counter(), False]
-    
+    finalResult = ''    # keeps track of if PS or PR is clicked
+    highLow = [0, 0]    # intervalStart keeps track of time between clicks
+    intervalStart = time.perf_counter()    # When was the interval last updated?
+    latestEdit = [time.perf_counter(), False]   #and should we update the result string since new interval value was inserted?
     threshold = initialize(arduino)
-    
+
     while True:
         voltages = getVoltageValues(arduino)
+
         if voltages == -1:
             continue
-        else:                           # check if analog read voltage of PS|PR >= threshold voltage
+        else:   # check if analog read voltage of PS|PR >= threshold voltage
             if voltages[inputType] > threshold:
                 if highLow[inputType] == 0:
                     intervals.append(time.perf_counter() - intervalStart)
@@ -81,12 +84,13 @@ def loop(inputType, ditVal, epsilon, arduino):
                     print(m.morseToText(finalResult))
             elif (time.perf_counter() - latestEdit[0]) > (15 * ditVal):
                 break
-    
-    return (finalResult, intervals) 
+
+    return (finalResult, intervals)
 
 def intervalsToMorse(intervals, ditVal, epsilon):
     result = ""
     i = 0
+
     for interval in intervals:
         if i == 0:
             i += 1
@@ -104,13 +108,16 @@ def intervalsToMorse(intervals, ditVal, epsilon):
             else:
                 result += "-"
         i += 1
+
     return result
 
-def getVoltageValues(arduino):
-    arduinoInput = arduino.readline()                # read from the serial line
-    #print(arduinoInput)
+def getVoltageValues(arduino, debug = False):
+
+    arduinoInput = arduino.readline()
     voltageStrings = arduinoInput.decode("utf-8").split("|")
-    print(voltageStrings)
+    if debug:
+        print(arduinoInput, voltageStrings)# read from the serial line and  read voltages
+
     try:
         num1 = float(voltageStrings[0])
         num2 = float(voltageStrings[1])
@@ -119,19 +126,24 @@ def getVoltageValues(arduino):
     else:
         return (num1, num2)
 
-#Calculates the average of all elements at odd indices of a list
-def calculateOddAverage(intervals):
-    print(intervals)
+def calculateOddAverage(intervals, debug = False):
+    '''Calculates the average of all elements at odd indices of a list'''
+    if debug:
+        print(intervals)
+
     sum = 0.0
     count = 0.0
+
     for i in range(1, len(intervals), 2):
         sum += intervals[i]
         count += 1
+
     return sum / count
 
 def startArduinoInput():
     response = "NULL"
     inputType = 0
+
     while response != "Y" and response !="N":
         response = input("Are you using the pressure sensor instead of the light sensor? Y/N: ")
         if response == "Y":
@@ -142,6 +154,7 @@ def startArduinoInput():
             print("Invalid argument")
 
     response = "NULL"
+
     while response != "Y":
         print("We will now begin calibration")
         print('Enter the letter "h" or four dits as input and wait 9 seconds: ')
@@ -163,6 +176,8 @@ def startArduinoInput():
 
 def takeMachineInput(ditVal, arduino):
     return m.morseToText(loop(1, ditVal, ditVal * 0.3, arduino)[0])
+
+
 
 if __name__ == '__main__':
    print(startArduinoInput())
